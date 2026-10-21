@@ -1,0 +1,69 @@
+/* ============================================================
+   EduBío 360 — estilos del proyecto (sin Tailwind, CSS puro)
+   La paleta y los componentes coinciden con la página original.
+   ============================================================ */
+
+:root {
+  --amarillo: #fdc010;
+  --amarillo-hover: #e8ac03;
+  --amarillo-suave: #fef2c5;
+  --negro: #161616;
+  --gris-oscuro: #2b2b2b;
+  --gris: #6b727e;
+  --blanco: #ffffff;
+  --borde-edubio: #e6e8eb;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--blanco);
+  color: var(--negro);
+}
+
+/* ---------- Navbar ---------- */
+.navbar-edubio { background-color: var(--amarillo); min-height: 72px; }
+.navbar-edubio .logo { font-size: 1.5rem; font-weight: 800; color: var(--negro); }
+.navbar-edubio .nav-link { font-weight: 600; color: var(--negro); }
+.navbar-edubio .nav-link:hover { color: var(--gris-oscuro); }
+
+/* ---------- Botones ---------- */
+.boton {
+  min-height: 44px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease;
+}
+.boton:hover { transform: translateY(-1px); }
+.boton-primario { background-color: var(--negro); color: var(--blanco); border: 1px solid var(--negro); }
+.boton-primario:hover { background-color: var(--gris-oscuro); color: var(--blanco); }
+.boton-secundario { background-color: var(--amarillo); color: var(--negro); border: 1px solid var(--negro); }
+.boton-secundario:hover { background-color: var(--amarillo-hover); color: var(--negro); }
+.boton-claro { background-color: var(--blanco); color: var(--negro); border: 1px solid var(--borde-edubio); }
+
+/* ---------- Hero ---------- */
+.hero-imagen { background-color: var(--amarillo-suave); border-radius: 22px; overflow: hidden; }
+.hero-imagen img { width: 100%; height: 100%; min-height: 320px; object-fit: cover; display: block; }
+
+/* ---------- Secciones ---------- */
+.titulo-seccion { font-weight: 700; margin-bottom: 0.5rem; }
+.descripcion-seccion { max-width: 700px; color: var(--gris); }
+
+/* ---------- Tarjetas de oferta ---------- */
+.tarjeta-oferta { border: 1px solid var(--borde-edubio); border-radius: 14px; overflow: hidden; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
+.oferta-imagen { height: 200px; object-fit: cover; }
+.etiqueta-edubio { background-color: var(--amarillo-suave); color: var(--negro); border-radius: 999px; padding: 5px 10px; font-weight: 700; }
+
+/* ---------- Video ---------- */
+.video-edubio { border-radius: 14px; overflow: hidden; }
+
+/* ---------- Footer ---------- */
+.footer-edubio { background-color: var(--negro); color: var(--blanco); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .hero-imagen img { min-height: 250px; }
+}
